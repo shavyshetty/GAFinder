@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Sharvil",
+    "picture": "images/ga1.jpg",
+    "timings": "3-5"
+  },
+  {
+    "name": "Ajay",
+    "picture": "images/ga2.jpg",
+    "timings": "5-6"
+  },
+  {
+    "name": "Mehvish",
+    "picture": "images/ga3.jpg",
+    "timings": "7-8"
+  }
+]
