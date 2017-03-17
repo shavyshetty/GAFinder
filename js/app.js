@@ -1,9 +1,9 @@
 var app = angular.module("myApp",[]);
 
-app.controller('jsonFetcher',['$http',function($http){
+app.controller('jsonFetcher',function($scope, $http){
 
-  var controller = this;
-  this.getdata  = 'json/data.json';
-  
+  $http.get('json/gadetails.json').success(function(data){
+      $scope.assistants = data;
+  });
 
-}]);
+});

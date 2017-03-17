@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "myApp">
+
 <head>
 </head>
 
 <body>
-<h1>bla bla</h1>
-<img src ="images/ga1.jpg">GA 1<br></img>
-<img src ="images/ga2.jpg">GA 2<br></img>
-<img src ="images/ga3.jpg">GA 3<br></img>
+
+<div ng-controller = "jsonFetcher" class="panel, panel-default">
+  <p class="panel-heading">Available GA's</p>
+<div ng-repeat = "assistant in assistants" >
+  <h1 class="panel-heading">{{assistant.name}}</h1>
+  <img src="{{assistant.picture}}" class="img-rounded, img-responsive,panel-body"</img>
+  <p class="panel-body">{{assistant.timings}}</p>
+</div>
+</div>
+<div class="panel, panel-default">
+<p class="panel-heading">Sorry, none of the GA's have their hours right now</p>
+<button type="button" class="btn btn-primary">Next Available timing</button>
+</div>
+
+<script>
+var ga1Monday = ["11-12","13.15-15.45","17.15-18.15"];
+var d = new Date();
+var slot = 8.00.split('.');
+d.setHours(slot[0]);
+d.setMinutes(slot[1]);
+alert(d);
+
+</script>
+
+
 
 
 
