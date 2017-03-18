@@ -14,6 +14,9 @@
   <p class="panel-body">{{assistant.timings}}</p>
 </div>
 </div>
+<div ng-controller = "ScheduleFetcher">
+<p ng-repeat = "schedule in schedule">{{schedule.slotstart}}</p>
+</div>
 <div class="panel, panel-default">
 <p class="panel-heading">Sorry, none of the GA's have their hours right now</p>
 <button type="button" class="btn btn-primary">Next Available timing</button>
@@ -22,11 +25,10 @@
 <script>
 var ga1Monday = ["11-12","13.15-15.45","17.15-18.15"];
 var d = new Date();
-var slot = 8.00.split('.');
+var slot = "8.00".split('.');
 d.setHours(slot[0]);
 d.setMinutes(slot[1]);
-alert(d);
-
+console.log(d);
 </script>
 
 
